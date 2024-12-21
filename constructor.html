@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Конструктор персонажей</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/constructor.js" defer></script>
+</head>
+<body>
+    <main>
+        <section class="form-section">
+            <h2>Создать нового персонажа</h2>
+            <form id="character-form">
+                <div class="form-group">
+                    <label for="name">Имя персонажа:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="image">Выберите изображение:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="description">Описание:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+        
+                <button type="submit" class="submit-button">Добавить персонажа</button>
+            </form>
+        </section>        
+        <section class="table-section">
+            <h2>Список персонажей</h2>
+            <table class="styled-table" id="characters-table">
+                <thead>
+                    <tr>
+                        <th>Изображение</th>
+                        <th>Имя</th>
+                        <th>Описание</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Добавленные персонажи будут появляться здесь -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
