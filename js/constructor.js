@@ -18,11 +18,6 @@
     // Добавление персонажа в таблицу
     const addCharacterToTable = (character) => {
         const row = document.createElement('tr');
-        // row.innerHTML = `
-        //     <td><img src="${character.image}" alt="${character.name}" class="character-image"></td>
-        //     <td>${character.name}</td>
-        //     <td>${character.description}</td>
-        // `;
         
         const imageCell = document.createElement('td');
         const image = document.createElement('img');

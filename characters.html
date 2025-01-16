@@ -8,61 +8,69 @@
         <script src="js/comments.js"></script>
     </head>
     <body>
-        <main>
-            <h2>Описание персонажей</h2>
-            <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Персонаж</th>
-                        <th>Описание</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="images/1.jpg" alt="Персонаж 1" class="character-image"></td>
-                        <td><strong>Человек-Паук</strong> — крутой.</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/2.jpg" alt="Персонаж 2" class="character-image"></td>
-                        <td><strong>Дядюшка Бен</strong> — старый.</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/3.jpg" alt="Персонаж 3" class="character-image"></td>
-                        <td><strong>Человек-факел</strong> — горячий.</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/4.jpg" alt="Персонаж 4" class="character-image"></td>
-                        <td><strong>Паразит</strong> — страшный.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- Форма авторизации -->
-            <section id="auth-section">
-                <h2>Войти в комментарии</h2>
-                <form id="auth-form">
-                    <label for="auth-name">Ваше имя:</label>
-                    <input type="text" id="auth-name" required>
-                    <label for="auth-email">Ваш email:</label>
-                    <input type="email" id="auth-email" required>
-                    <button type="submit">Войти</button>
-                </form>
+        <main class="content">
+            <!-- Таблица персонажей -->
+            <section id="characters-section">
+                <h2>Описание персонажей</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Персонаж</th>
+                            <th>Описание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="images/1.jpg" alt="Персонаж 1" class="character-image"></td>
+                            <td><strong>Человек-Паук</strong> — крутой.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/2.jpg" alt="Персонаж 2" class="character-image"></td>
+                            <td><strong>Дядюшка Бен</strong> — старый.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/3.jpg" alt="Персонаж 3" class="character-image"></td>
+                            <td><strong>Человек-факел</strong> — горячий.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/4.jpg" alt="Персонаж 4" class="character-image"></td>
+                            <td><strong>Паразит</strong> — страшный.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/5.jpg" alt="Персонаж 5" class="character-image"></td>
+                            <td><strong>Гоблач</strong> — ваще зеленый.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
+        
+            <section id="comments-wrapper">
+                <section id="auth-section">
+                    <h2>Войти в комментарии</h2>
+                    <form id="auth-form">
+                        <label for="auth-name">Ваше имя:</label>
+                        <input type="text" id="auth-name" required>
+                        <label for="auth-email">Ваш email:</label>
+                        <input type="email" id="auth-email" required>
+                        <button type="submit">Войти</button>
+                    </form>
+                </section>
 
-            <!-- Секция комментариев -->
-            <section id="comments-section" hidden>
-                <h2>Комментарии</h2>
-                <button id="filter-toggle">Показать мои</button>
-                <div id="preloader" class="preloader"></div>
-                <div id="comments-container"></div>
-                <div id="error-message" class="error-message"></div>
-
-                <form id="comment-form">
-                    <h3>Добавить комментарий</h3>
-                    <label for="comment-body">Комментарий:</label>
-                    <textarea id="comment-body" name="body" rows="3" required></textarea>
-                    <button type="submit">Отправить</button>
-                </form>
+                <section id="comments-section" hidden>
+                    <h2>Комментарии</h2>
+                    <button id="filter-toggle">Показать мои</button>
+                    <div id="preloader" class="preloader"></div>
+                    <div id="comments-container"></div>
+                    <div id="error-message" class="error-message"></div>
+        
+                    <form id="comment-form">
+                        <h3>Добавить комментарий</h3>
+                        <label for="comment-body">Комментарий:</label>
+                        <textarea id="comment-body" name="body" rows="3" required></textarea>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </section>
             </section>
-        </main>
+        </main>        
     </body>
 </html>

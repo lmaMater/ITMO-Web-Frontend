@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <title>Информация об организации</title>
-        <link rel="stylesheet" href="css/style.css">
-        <meta charset="UTF-8">
-        <script src="js/main.js" defer></script>
-    </head>
-    <body>
-        <main>
-            <h2>Информация об организации</h2>
-            <p>Здесь что-то будет...</p>
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <section class="gallery">
+            <h2>Галерея персонажей</h2>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/1.jpg" alt="Персонаж 1"></div>
+                    <div class="swiper-slide"><img src="images/2.jpg" alt="Персонаж 2"></div>
+                    <div class="swiper-slide"><img src="images/3.jpg" alt="Персонаж 3"></div>
+                    <div class="swiper-slide"><img src="images/4.jpg" alt="Персонаж 4"></div>
+                    <div class="swiper-slide"><img src="images/5.jpg" alt="Персонаж 5"></div>
+                    <div class="swiper-slide"><img src="images/6.jpg" alt="Персонаж 6"></div>
+                </div>
+                <!-- navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Инициализация Swiper
+        var swiper = new Swiper(".mySwiper", {
+            // Включаем эффект "карточек"
+            // Каждая карточка поворачивается и накладывается поверх другой
+            effect: "cards", 
+            
+            // Активируем возможность захвата курсором
+            // Пользователь сможет "перетаскивать" карточки
+            grabCursor: true, 
+            
+            // Конфигурация элементов управления (навигация)
+            navigation: {
+                // Класс кнопки "Следующий слайд"
+                nextEl: ".swiper-button-next", 
+                // Класс кнопки "Предыдущий слайд"
+                prevEl: ".swiper-button-prev", 
+            },
+        });
+    </script>
+
+</body>
 </html>
